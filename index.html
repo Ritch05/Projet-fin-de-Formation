@@ -3,43 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Explore Voyages - Agence de Voyages</title>
+  <title>Bidaness Travel - Agence de Voyages</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- CSS personnalisé -->
   <link href="Styles/style.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Explore Voyages</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav fs-5">
-          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+  <!-- Navbar avec logo rond -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="image/logo2.jpg" alt="Logo">
+      <div class="Agency name">Bidaness Travel</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+    <!-- Bouton hamburger pour mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Liens de navigation -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#hero">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#destinations">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#circuits">Circuits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
   <!-- Section Héros -->
 
-<section class="hero">
-  <div class="hero-wrapper">
-    <img class="hero-img" src="image/Les Caraibes.jpg" alt="Image de plage">
-    <a href="#destinations" class="hero-btn">Découvrez nos offres</a>
+<section class="hero-section position-relative">
+  <!-- Image avec animation initiale -->
+  <img src="image/Les Caraibes.jpg" class="img-fluid hero-image" alt="Image plage"
+       data-aos="zoom-in-up" data-aos-duration="1500">
+
+  <!-- Contenu texte avec animation décalée -->
+  <div class="hero-content position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1600">
+      Offrez-vous l’évasion de vos rêves
+    </h1>
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2100">
+      Explorez des destinations magiques avec nous.
+    </p>
+    <a href="#destinations" class="btn btn-primary" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="2600">
+      Découvrez nos destinations
+    </a>
   </div>
 </section>
+
+
 
 
 
@@ -50,7 +96,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center fs-5">
           <p>
-            Explore Voyages est votre partenaire de confiance pour découvrir les plus belles destinations du monde. 
+            Bidaness Travel est votre partenaire de confiance pour découvrir les plus belles destinations du monde. 
             Nous vous proposons des circuits sur mesure, adaptés à vos envies, avec un service personnalisé et des experts passionnés.
           </p>
           <p>
@@ -61,103 +107,108 @@
     </div>
   </section>
 
-  <!-- Section Destinations -->
-  <section id="destinations" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Nos Destinations Populaires</h2>
-      <div class="row g-4">
-
-        <!-- Destination 1 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/senegal.jpeg" class="card-img-top" alt="Plage Paradisiaque" />
-            <div class="card-body">
-              <h5 class="card-title">Dakar</h5>
-              <p class="card-text">capitale du Sénégal, allie énergie urbaine, culture riche et charme atlantique.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Destination 2 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/man.jpg" class="card-img-top" alt="Montagnes Majestueuses" />
-            <div class="card-body">
-              <h5 class="card-title">Man</h5>
-              <p class="card-text"> Perle de l'ouest ivoirien, séduit par ses montagnes, ses cascades et sa nature verdoyante.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Destination 3 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/havane.jpg" class="card-img-top" alt="Ville Historique" />
-            <div class="card-body">
-              <h5 class="card-title">La Havane</h5>
-              <p class="card-text">Capitale cubaine, charme par son architecture coloniale, sa musique envoûtante et son ambiance rétro.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Destination 4 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/doubai.jpg" class="card-img-top" alt="Forêt Tropicale" />
-            <div class="card-body">
-              <h5 class="card-title">Dubai</h5>
-              <p class="card-text">Une ville ultramoderne au cœur du désert, allie luxe et innovation.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Destination 5 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/Ghana-5-scaled.jpg" class="card-img-top" alt="Désert Mystérieux" />
-            <div class="card-body">
-              <h5 class="card-title">Accra</h5>
-              <p class="card-text">Capitale dynamique du Ghana, mêle culture vibrante et ambiance côtière.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Destination 6 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="image/mauritanie.jpeg" class="card-img-top" alt="Ville Moderne" />
-            <div class="card-body">
-              <h5 class="card-title">Boutilmitt</h5>
-              <p class="card-text">Ville saharienne de Mauritanie, offre calme, tradition et paysages désertiques.</p>
-              <a href="#Contact" class="btn btn-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Contact avec formulaire -->
- <!-- Section Contact -->
-<section id="contact" class="contact-section py-5 bg-light">
+  <section id="destinations" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Contactez-Nous</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
+    <h2 class="text-center mb-4">Nos Destinations</h2>
+    <div class="row">
+
+      <!-- Destination 1: Dubaï -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500" >
+        <div class="card h-100">
+          <img src="image/doubai.jpg" class="card-img-top" alt="Dubaï">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Dubaï</h5>
+            <p class="card-text">Luxe et modernité au cœur du désert.</p>
+            <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Destination 2: Dakar -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card h-100">
+          <img src="image/senegal.jpeg" class="card-img-top" alt="Dakar">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Dakar</h5>
+            <p class="card-text">Une ville vibrante au bord de l’Atlantique.</p>
+            <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Destination 3: La Havane -->
+      <div class="col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1500">
+        <div class="card h-100">
+          <img src="image/havane.jpg" class="card-img-top" alt="La Havane">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">La Havane</h5>
+            <p class="card-text">Charme colonial et ambiance festive.</p>
+            <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Destination 4: Man -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card h-100">
+          <img src="image/man.jpg" class="card-img-top" alt="Man">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Man</h5>
+            <p class="card-text">Nature luxuriante et paysages spectaculaires.</p>
+           <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Destination 5: Accra -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card h-100">
+          <img src="image/Ghana-5-scaled.jpg" class="card-img-top" alt="Accra">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Accra</h5>
+            <p class="card-text">Ville dynamique et riche en culture.</p>
+            <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Destination 6: Boutilimit -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card h-100">
+          <img src="image/mauritanie.jpeg" class="card-img-top" alt="Boutilimit">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Boutilimit</h5>
+            <p class="card-text">Ville paisible et authentique du Sahara.</p>
+            <a href="#contact" class="btn btn-custom mt-auto">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <section id="contact" class="py-5" data-aos="fade-up" data-aos-duration="1500">
+  <div class="container">
+    <div class="row justify-content-center align-items-start">
+
+      <!-- Formulaire -->
+      <div class="col-md-6 mb-4">
+        <h3 class="mb-4">Contactez-nous</h3>
         <form>
           <div class="mb-3">
-            <label for="name" class="form-label"></label>
-            <input type="text" class="form-control" id="name" placeholder="Nom">
+            <label for="nom" class="form-label"></label>
+            <input type="text" class="form-control" id="nom" placeholder="Nom" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label"></label>
-            <input type="email" class="form-control" id="" placeholder="Email">
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required >
           </div>
           <div class="mb-3">
             <label for="destination" class="form-label"></label>
@@ -165,13 +216,23 @@
           </div>
           <div class="mb-3">
             <label for="message" class="form-label"></label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+            <textarea class="form-control" id="message" placeholder="Votre message" rows="4"></textarea>
           </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
       </div>
+
+      <!-- Carte Google Maps -->
+      <div class="col-md-6">
+        <h3 class="mb-4">Notre localisation</h3>
+        <div class="ratio ratio-4x3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.144081449952!2d-4.009076!3d5.347044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb65f9d781ef%3A0x3dd11f53c1cfc0cf!2sAbidjan!5e0!3m2!1sfr!2sci!4v1659634567890!5m2!1sfr!2sci"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -179,7 +240,7 @@
   <!-- Pied de page -->
   <footer class="text-center py-4 bg-dark text-white">
     <div class="container">
-      <p class="mb-2">&copy; 2025 Explore Voyages. Tous droits réservés.</p>
+      <p class="mb-2">© 2025 | Conception par Marega Yacouba | Droits d’auteur par Bidaness Travel. Tous les droits sont réservés</p>
       <div class="fs-4">
         <a href="#" aria-label="Facebook" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
         <a href="#" aria-label="Twitter" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
@@ -187,4 +248,16 @@
         <a href="#" aria-label="LinkedIn" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
+        </div> 
+  </footer>
+
+  <!-- Scripts Bootstrap et AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+
  
