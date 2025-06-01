@@ -21,17 +21,7 @@
   width: 90%;
 }
 
-.hero-img,
-.hero-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 0px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  filter: brightness(30%);
-  max-height: 550px;
-  display: block;
-}
+
 
 .hero-btn {
   position: absolute;
@@ -55,10 +45,10 @@
 
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
-margin-bottom: 0px;
-padding-bottom: 0px;
+ margin-bottom: 0px;
+ padding-bottom: 0px;
  
 }
 
@@ -123,8 +113,28 @@ padding-bottom: 0px;
     top: 30% !important;
   }
 }
-#about {
-  margin: 0px;
-  padding: 0px;
+
+.hero-section {
+  position: relative;
+  background-image: url('chemin/vers/ton-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* ↖️ assombrit davantage */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }
 
